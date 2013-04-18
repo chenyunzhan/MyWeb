@@ -1,6 +1,6 @@
 package com.snow.model;
 
-public class Article {
+public class Article { 
 	private Integer id;
 	private Integer userid;
 	private Integer typeid;
