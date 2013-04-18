@@ -149,7 +149,7 @@
 				<div style="text-align: center; padding-top: 20px;">
 					<form id="myform" method="post" action="<%=request.getContextPath()%>/ArticleServlet?method=insert&userid=<%=u == null ? 9999 : u.getId() %>&typeid=<%=request.getAttribute("typeid")%>">
 						title:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name="title" size="76"><br><br>
-						author:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name="author" size="76"><br><br>
+						author:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name="author" value="<%=u == null ? "admin" : u.getName() %>" size="76"><br><br>
 						content:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<textarea rows="10" name="content" cols="75"></textarea>
 					</form>
 				</div>
