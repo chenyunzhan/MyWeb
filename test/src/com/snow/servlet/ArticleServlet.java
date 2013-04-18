@@ -89,6 +89,8 @@ public class ArticleServlet extends HttpServlet {
 			ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
+		} finally {
+			DBUtil.close(conn);
 		}
 		
 	}
@@ -136,7 +138,9 @@ public class ArticleServlet extends HttpServlet {
 			//response.sendRedirect(request.getContextPath() + "/l.jsp");
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}  
+		} finally {
+			DBUtil.close(conn);
+		}
 		
 	}
 	
@@ -163,7 +167,9 @@ public class ArticleServlet extends HttpServlet {
 			request.getRequestDispatcher("/jsp/admin/article/update.jsp").forward(request, response);
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}  
+		} finally {
+			DBUtil.close(conn);
+		} 
 	}
 	
 	private void update(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -202,7 +208,9 @@ public class ArticleServlet extends HttpServlet {
 			request.getRequestDispatcher("/jsp/admin/article/update.jsp").forward(request, response);
 		} catch (SQLException e) {
 			e.printStackTrace();
-		} 
+		} finally {
+			DBUtil.close(conn);
+		}
 	}
 	
 	private void delete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -216,7 +224,9 @@ public class ArticleServlet extends HttpServlet {
 			System.out.println(num);
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}  
+		} finally {
+			DBUtil.close(conn);
+		}
 		response.sendRedirect(request.getContextPath() + "/ArticleServlet?method=query&source=admin");
 	}
 }
