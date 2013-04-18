@@ -89,6 +89,8 @@ public class UserServlet extends HttpServlet {
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
+		} finally {
+			DBUtil.close(conn);
 		}  
 	}
 	
@@ -114,6 +116,8 @@ public class UserServlet extends HttpServlet {
 			request.getRequestDispatcher("/jsp/admin/user/list.jsp").forward(request, response);
 		} catch (SQLException e) {
 			e.printStackTrace();
+		} finally {
+			DBUtil.close(conn);
 		}  
 	}
 	
@@ -146,6 +150,8 @@ public class UserServlet extends HttpServlet {
 			request.getRequestDispatcher("/jsp/admin/user/add.jsp").forward(request, response);
 		} catch (SQLException e) {
 			e.printStackTrace();
+		} finally {
+			DBUtil.close(conn);
 		}  
 	}
 	
@@ -170,6 +176,8 @@ public class UserServlet extends HttpServlet {
 			request.getRequestDispatcher("/jsp/admin/user/update.jsp").forward(request, response);
 		} catch (SQLException e) {
 			e.printStackTrace();
+		} finally {
+			DBUtil.close(conn);
 		}  
 	}
 	
@@ -205,6 +213,8 @@ public class UserServlet extends HttpServlet {
 			request.getRequestDispatcher("/jsp/admin/user/update.jsp").forward(request, response);
 		} catch (SQLException e) {
 			e.printStackTrace();
+		} finally {
+			DBUtil.close(conn);
 		} 
 	}
 

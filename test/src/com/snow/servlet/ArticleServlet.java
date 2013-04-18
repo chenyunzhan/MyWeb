@@ -112,8 +112,9 @@ public class ArticleServlet extends HttpServlet {
 			ps.setString(1, typeid);
 			ps.setInt(2, userid);
 			if("admin".equals(source)) {
-				sql = "select * from article";
+				sql = "select * from article where userid = ?";
 				ps = conn.prepareStatement(sql);
+				ps.setInt(1, userid);
 			} 
 			ResultSet rs = ps.executeQuery();
 			List<Article> list = new ArrayList<Article>();

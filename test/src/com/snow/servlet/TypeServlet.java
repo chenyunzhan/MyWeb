@@ -104,6 +104,8 @@ public class TypeServlet extends HttpServlet {
 			//response.sendRedirect(request.getContextPath() + "/l.jsp");
 		} catch (SQLException e) {
 			e.printStackTrace();
+		} finally {
+			DBUtil.close(conn);
 		}  
 	}
 	
@@ -125,6 +127,8 @@ public class TypeServlet extends HttpServlet {
 			request.getRequestDispatcher("/jsp/admin/type/add.jsp").forward(request, response);
 		} catch (SQLException e) {
 			e.printStackTrace();
+		} finally {
+			DBUtil.close(conn);
 		}  
 	}
 	
@@ -147,6 +151,8 @@ public class TypeServlet extends HttpServlet {
 			System.out.println(num);
 		} catch (SQLException e) {
 			e.printStackTrace();
+		} finally {
+			DBUtil.close(conn);
 		}  
 		request.setAttribute("type", t);
 		request.getRequestDispatcher("/jsp/admin/type/update.jsp").forward(request, response);
@@ -175,6 +181,8 @@ public class TypeServlet extends HttpServlet {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
+		} finally {
+			DBUtil.close(conn);
 		}  
 		return t;
 	}
@@ -190,6 +198,8 @@ public class TypeServlet extends HttpServlet {
 			System.out.println(num);
 		} catch (SQLException e) {
 			e.printStackTrace();
+		} finally {
+			DBUtil.close(conn);
 		}  
 		response.sendRedirect(request.getContextPath() + "/TypeServlet?method=query&source=admin");
 	}
@@ -217,6 +227,8 @@ public class TypeServlet extends HttpServlet {
 			//response.sendRedirect(request.getContextPath() + "/l.jsp");
 		} catch (SQLException e) {
 			e.printStackTrace();
+		} finally {
+			DBUtil.close(conn);
 		}  
 	}
 
