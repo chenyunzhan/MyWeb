@@ -22,6 +22,7 @@
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery.layout-latest.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery.form.js"></script>
 		<link type="text/css" rel="stylesheet" href="<%=request.getContextPath()%>/css/ui-lightness/jquery-ui-1.10.0.custom.css">
+		<link rel="shortcut icon" href="<%=request.getContextPath()%>/images/favicon.ico" />
 		<title>cloud</title>
 		<script type="text/javascript">
 			$(function() {
