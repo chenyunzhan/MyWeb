@@ -5,7 +5,7 @@
 
 <html>
 	<head>
-	<link rel="shortcut icon" href="<%=request.getContextPath()%>/images/favicon.ico" />
+	<link rel="shortcut icon" href="<%=request.getContextPath()%>/images/favicon.png" />
 	</head>
 	<body>
 	aaaaaaaaaaaaaaaaaaaaaa
