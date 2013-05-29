@@ -27,6 +27,8 @@ public class Counter {
 		} catch (SQLException e) {
 			System.out.println("===================count exception==========================");
 			e.printStackTrace();
-		}  
+		}  finally {
+			DBUtil.close(conn);
+		}
 	}
 }
