@@ -15,7 +15,7 @@ public class DBUtil {
             URL path = DBUtil.class.getResource("/");
             Connection conn = null;
             if(path.toString().contains("vcap")) {
-            	conn = DriverManager.getConnection("jdbc:mysql://172.30.48.30:3306/d8240767edeab4bf5a252e3658b3afa0f", "uFeMPDQILM4Ur", "pfKbDOH1hlEeh");  
+            	conn = DriverManager.getConnection("jdbc:mysql://10.4.3.233:3306/d079c75dcb6774864a29fb39f682e0bb0", "ul2C8QGJ0msUJ", "pfOE1ki60EExS");  
             }else {
             	conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/web", "root", "root");  
             }
