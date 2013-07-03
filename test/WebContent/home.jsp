@@ -191,7 +191,7 @@
 		<%if(null == u) { %>
 			<div class="ui-layout-north">welcome guest !!!&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)" onclick="tologin()">login</a>|<a href="javascript:void(0)" onclick="toregister()">register</a></div>
 		<%} else {%>
-			<div class="ui-layout-north">welcome <%=u.getName() %> !!!</div>  
+			<div class="ui-layout-north">welcome <%=u.getName() %> !!!&nbsp;&nbsp;&nbsp;&nbsp;<a href="logout.jsp">logout</a></div>  
 		<%} %>
 		<div id="west" class="ui-layout-west">
 			<div id="accordion" >

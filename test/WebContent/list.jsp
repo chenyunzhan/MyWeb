@@ -40,6 +40,8 @@
 				function showSuccess(){
 				    $("#post_success").css("display", "block");
 				    $('#post_success').delay(1000).hide(0);
+				    setTimeout("window.location.href=window.location.href;",1000);
+				    //setTimeout("window.scrollTo(0,document.body.scrollHeight);",1000);
 				}
 			});
 			
