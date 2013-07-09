@@ -217,6 +217,7 @@
 						out.print("</div>");
 					}
 				%>
+				<h3>Forum</h3><div style='padding: 0px'><ul><li><a title='TopicServlet?method=query&typeid=1'>html讨论区</a></li></ul></div>
 			</div>
 		</div> 
 	

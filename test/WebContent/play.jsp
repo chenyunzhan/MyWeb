@@ -14,8 +14,17 @@
 	</div>
 	 -->
 
-
 	<Embed src='videos/001_lua.swf' autoPlay="true" width="1000" height="600"/>
 	<h2>信息反馈联系方式：chenyunzhan08@126.com或者直接在本网站Forum栏目进行留言。</h2>
+	<!-- 
+	 
+	 <object align=middle classid="CLSID:22d6f312-b0f6-11d0-94ab-0080c74c7e95" class=OBJECT id=MediaPlayer width=196 height=196>
+     <param name=ShowStatusBar value=0>
+     <param name=Filename value="shenqing.mp4">
+     <embed type=application/x-oleobject codebase="http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=5,1,52,701" >
+     </embed>
+  	 </object>
+	 -->
+	 
 	</body>
 </html>
