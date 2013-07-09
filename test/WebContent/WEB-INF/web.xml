@@ -9,20 +9,6 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
-   <!-- 
-  	处理session失效
-  <filter>
-    <display-name>CreateAdminFilter</display-name>
-    <filter-name>CreateAdminFilter</filter-name>
-    <filter-class>com.snow.util.CreateAdminFilter</filter-class>
-  </filter>
-  <filter-mapping>
-    <filter-name>CreateAdminFilter</filter-name>
-    <url-pattern>/*</url-pattern>
-  </filter-mapping>
-   -->
-  
   <servlet>
     <description></description>
     <display-name>ArticleServlet</display-name>
@@ -53,5 +39,24 @@
     <servlet-name>UserServlet</servlet-name>
     <url-pattern>/UserServlet</url-pattern>
   </servlet-mapping>
- 
+  <servlet>
+    <description></description>
+    <display-name>TopicServlet</display-name>
+    <servlet-name>TopicServlet</servlet-name>
+    <servlet-class>com.snow.servlet.TopicServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TopicServlet</servlet-name>
+    <url-pattern>/TopicServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CommentServlet</display-name>
+    <servlet-name>CommentServlet</servlet-name>
+    <servlet-class>com.snow.servlet.CommentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CommentServlet</servlet-name>
+    <url-pattern>/CommentServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -22,7 +22,7 @@
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery.layout-latest.js"></script>
 		<script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery.form.js"></script>
 		<link type="text/css" rel="stylesheet" href="<%=request.getContextPath()%>/css/ui-lightness/jquery-ui-1.10.0.custom.css">
-		<link rel="shortcut icon" href="<%=request.getContextPath()%>/images/favicon.ico" />
+		<link rel="shortcut icon" href="<%=request.getContextPath()%>/images/leaf.png" />
 		<title>cloud</title>
 		<script type="text/javascript">
 			$(function() {
@@ -186,12 +186,12 @@
 			<%--
 			<iframe id="myframe" style="background:url('images/blank.jpg'); background-repeat:no-repeat ; background-position: center;" width="100%" scrolling="no" height=100% frameborder="0"></iframe>
 			 --%>
-			<iframe id="myframe" width="100%" scrolling="yes" height=100% frameborder="0"></iframe>
+			<iframe id="myframe" width="100%" scrolling="yes" height=100% frameborder="0" src="<%=request.getContextPath() %>/default.jsp"></iframe>
 		</div>  
 		<%if(null == u) { %>
-			<div class="ui-layout-north">welcome guest !!!&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)" onclick="tologin()">login</a>|<a href="javascript:void(0)" onclick="toregister()">register</a></div>  
+			<div class="ui-layout-north">welcome guest !!!&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)" onclick="tologin()">login</a>|<a href="javascript:void(0)" onclick="toregister()">register</a></div>
 		<%} else {%>
-			<div class="ui-layout-north">welcome <%=u.getName() %> !!!</div>  
+			<div class="ui-layout-north">welcome <%=u.getName() %> !!!&nbsp;&nbsp;&nbsp;&nbsp;<a href="logout.jsp">logout</a></div>  
 		<%} %>
 		<div id="west" class="ui-layout-west">
 			<div id="accordion" >
@@ -217,6 +217,7 @@
 						out.print("</div>");
 					}
 				%>
+				<h3>Forum</h3><div style='padding: 0px'><ul><li><a title='TopicServlet?method=query&typeid=1'>html讨论区</a></li></ul></div>
 			</div>
 		</div> 
 	

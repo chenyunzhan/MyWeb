@@ -10,8 +10,12 @@
 我在云端；<br>
 我的环境变量信息：
 <%
-String srvInfo = System.getenv("VCAP_SERVICES");
-out.println(srvInfo);
+String name = System.getenv("MOPAAS_MYSQL700_NAME");
+String host = System.getenv("MOPAAS_MYSQL700_HOST");
+String port = System.getenv("MOPAAS_MYSQL700_PORT");
+String username = System.getenv("MOPAAS_MYSQL700_USERNAME");
+String password = System.getenv("MOPAAS_MYSQL700_PASSWORD");
+out.println("name:" + name + " host:" + host + " port:" + port + " username:" + username + " password:" + password);
 %>
 </body>
 </html>

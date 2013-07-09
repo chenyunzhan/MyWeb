@@ -106,7 +106,7 @@ public class ArticleServlet extends HttpServlet {
 			userid = 9999;
 		}
 		Connection conn = DBUtil.getConn();
-		String sql = "select * from article where typeid = ? and userid = ?";
+		String sql = "select * from article where typeid = ? and userid = ? order by id desc";
 		try {
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ps.setString(1, typeid);
